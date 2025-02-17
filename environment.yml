@@ -1,0 +1,13 @@
+name: new-attribution
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - fair=2.2.2
+  - jupyter
+  - jupytext
+  - matplotlib
+  - netcdf4
+  - numpy
+  - pandas
+  - xarray
