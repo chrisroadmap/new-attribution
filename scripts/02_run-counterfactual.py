@@ -86,7 +86,7 @@ pl.plot(np.median(temp_out[:, 0, :], axis=1));
 np.median(temp_out[:, 0, :], axis=1)
 
 # %%
-# os.makedirs('../output/results', exist_ok=True)
+os.makedirs('../output/results', exist_ok=True)
 
 # %%
 ds = xr.Dataset(
@@ -95,11 +95,11 @@ ds = xr.Dataset(
         aerosol_forcing = (['timebound', 'scenario', 'config'], faer_out),
     ),
     coords = dict(
-        timebound = np.arange(1750, 2102),
+        timebound = np.arange(1750, 2026),
         scenario = labels,
         config = df_configs.index,
     ),
 )
-ds.to_netcdf('../output/results/scenariomip-cmip7.nc')
+ds.to_netcdf('../output/results/counterfactual.nc')
 
 # %%
