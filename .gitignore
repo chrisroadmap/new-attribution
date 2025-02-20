@@ -1,3 +1,11 @@
+*.DS_Store
+
+# don't commit notebooks with jupytext
+*.ipynb
+
+# big outputs
+output/results
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
